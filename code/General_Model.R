@@ -4,7 +4,8 @@
 ##' @todo 
 ##' > Actually build it, have you seen the file.
 
-source('./code/Normal_Model.R')
+# Get 
+source('./code/Models/*')
 
 CreateModel <- function(data, response_var, explanatory_vars, model_type='normal'){
   
