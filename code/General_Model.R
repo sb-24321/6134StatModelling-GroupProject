@@ -4,7 +4,7 @@
 ##' @todo 
 ##' > Actually build it, have you seen the file.
 
-source('./code/normal_model.R')
+source('./code/Normal_Model.R')
 
 CreateModel <- function(data, response_var, explanatory_vars, model_type='normal'){
   
@@ -18,16 +18,3 @@ CreateModel <- function(data, response_var, explanatory_vars, model_type='normal
 }
 
 
-
-Main <- function(){
-  matches <- read.csv("./data/ashford_matches.csv")
-  
-  model <- CreateNormalModel(data=matches,
-                             response_var='goals_scored',
-                             explanatory_vars='opponent_rank'
-                             )
-
-  print(model)
-}
-
-Main()
