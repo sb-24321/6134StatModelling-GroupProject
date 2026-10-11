@@ -1,6 +1,6 @@
 CreateBinomialModel <- function(data, 
                         response_var, 
-                        explanatory_vars
+                        explanatory_vars,
                         link='logit'){
   
   # Formats the variables. Required to fit the models.
@@ -10,6 +10,6 @@ CreateBinomialModel <- function(data,
   # Build and fit the model using all the specified explanatory variables.
   formula <- reformulate(explanatory_vars, response=response_var) 
   model <- glm(formula, data=data, family=binomial(link=link)) 
-
+  
   return(model) 
 }

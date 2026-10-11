@@ -6,20 +6,19 @@ source('./code/General_Model.R')
 matches <- read.csv("./data/ashford_matches.csv")
 
 ## Creating a normal linear model.
-
 model <- CreateModel(data=matches,
                            response_var='goals_scored',
                            explanatory_vars='opponent_rank',
                            model_type='normal')
 
-## Creating a binomial linear model.
+
+## Creating a binomial model.
 ## Our response variable represents a binary outcome.
 ## Essentially there are two outcomes: Yes/No, True/False, Home/Away?????
-
-# The binary model gives us 0.44284 + 0.06809x, a normal model gives us 0 + 0x.
-matches$num_home_away <- (ifelse(matches$home_away == 1, "1", "0")) # binify our data.
-model<-CreateModel(data=matches,
+matches$num_home_away <- (ifelse(matches$home_away == 1, 1, 0)) # binify our data.
+model <- CreateModel(data=matches,
                    response_var='num_home_away',
-                   explanatory_vars='goals_scored',
-                   model_type='binary')
+                   explanatory_vars=c('goals_scored', 'goals_conceded'),
+                   model_type='binomial')
+# The binary model gives us 0.44284 + 0.06809x, a normal model gives us 0 + 0x.
 
