@@ -1,26 +1,19 @@
-# Get the various models.
-source('./code/Models/Normal_Model.R') 
-source('./code/Models/Binomial_Model.R')
-source('./code/Models/Poisson_Model.R')
-
 CreateModel <- function(data, response_var, explanatory_vars, model_type='normal'){
   
-  if (model_type=='normal'){
-    model <- CreateNormalModel(data=data,
-                      response_var=response_var,
-                      explanatory_vars=explanatory_vars)
+  # Formats the variables. Required to fit the models.
+  explanatory_vars <- as.character(unlist(explanatory_vars))
+  response_var <- as.character(unlist(response_var))
 
+  # Build and fit the model using all the specified explanatory variables.
+  formula <- reformulate(explanatory_vars, response=response_var) 
+
+  if (model_type=='normal'){
+    model <- lm(formula, data=data) 
   } else if (model_type=='binomial'){ 
-    model <- CreateBinomialModel(data=data,
-                      response_var=response_var,
-                      explanatory_vars=explanatory_vars
-    )
+    model <- glm(formula, data=data, family=binomial(link='logit')) 
   } else if (model_type=='poisson'){
-    model <- CreatePoissonModel(data=data,
-                      response_var=response_var,
-                      explanatory_vars=explanatory_vars
-    )
-  } 
+    model <- glm(formula, data=data, family=poisson(link='log')) 
+  }
 
   return(model)
 }
