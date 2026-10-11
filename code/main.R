@@ -20,5 +20,4 @@ model <- CreateModel(data=matches,
                    response_var='num_home_away',
                    explanatory_vars=c('goals_scored', 'goals_conceded'),
                    model_type='binomial')
-# The binary model gives us 0.44284 + 0.06809x, a normal model gives us 0 + 0x.
 
