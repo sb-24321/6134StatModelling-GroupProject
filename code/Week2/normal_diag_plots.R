@@ -17,8 +17,6 @@
 ##'   investiage a possible link.
 ##' > Allow for other models.
 ##'
-##' @author Sami 
-##' @date 11/10/26
 
 library("dplyr")
 
