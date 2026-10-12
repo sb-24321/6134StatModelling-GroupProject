@@ -1,22 +1,3 @@
-##' @title Normal Linear Regression Fitter
-##' 
-##' @description This file fits all the possible models for invididual dataset, following 
-##' the normal assumption.
-##'
-##' @function DiagnosticPlots; Creates linear model between a response variable and a list
-##'   of given elected explanatory variables from a given dataset. The output is a .pdf 
-##'   file with summary statistics, plots relating each explanatory variable to the 
-##'   response variable and diagnostic plots to help evaluate the effect of the model.
-##' 
-##' @function RelateAllCombinations: Given a dataset, it automates the process of matching
-##'   every possible combination of response and explanatory pairs.
-##' 
-##' @todo
-##' > Relating variables between the two tables.
-##'   In context we can relate the ashford matches to the ashford player statistics to
-##'   investiage a possible link.
-##' > Allow for other models.
-##'
 
 library("dplyr")
 
@@ -84,21 +65,6 @@ DiagnosticPlots <- function(data, response_var, explanatory_vars, path){
                 sep='\n'
   )
 
-  # We will measure how good using an Adjusted R^2.
-  # Blueprint to catagorise models into different folders. Folders must exist beforehand.
-  #adj_r <- model_summary$adj.r.squared 
-  #if (adj_r >= 0.9){
-    #path <- paste0(path, '/excellent_models')
-  #} else if (adj_r >= 0.7){
-    #path <- paste0(path, '/good_models')
-  #} else if (adj_r >= 0.5){
-    #path <- paste0(path, '/moderate_models')
-  #} else if (adj_r >= 0.3){
-    #path <- paste0(path, '/weak_models')
-  #} else {
-    #path <- paste0(path, '/useless_models')
-  #}
-    
   filename = paste0(
                     model_type,'-', response_var, '~', 
                     paste(explanatory_vars, collapse='+'), '.pdf')

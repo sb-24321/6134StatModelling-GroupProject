@@ -1,22 +1,10 @@
-CreateModel <- function(data, response_var, explanatory_vars, model_type='normal'){
-  
-  # Formats the variables. Required to fit the models.
-  explanatory_vars <- as.character(unlist(explanatory_vars))
-  response_var <- as.character(unlist(response_var))
-  
-  # Create the formula to fit into the model.
-  formula <- reformulate(explanatory_vars, response=response_var) 
-  
-  # Fit the model based on model_type.
-  if (model_type=='normal'){
-    model <- lm(formula, data=data) 
-  } else if (model_type=='binomial'){ 
-    model <- glm(formula, data=data, family=binomial(link='logit')) 
-  } else if (model_type=='poisson'){
-    model <- glm(formula, data=data, family=poisson(link='log')) 
-  }
+#' This file culminates all the various functions developed.
+#'
+#' As a result, user can import just this file, and have access to all the various function
+#' that are developed for this project.
 
-  return(model)
-}
+source('./code/Modeller/Modelling/CreateRegressionModel.R')
+
+
 
 
