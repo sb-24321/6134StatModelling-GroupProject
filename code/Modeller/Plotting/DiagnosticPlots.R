@@ -1,4 +1,5 @@
 DiagnosticPlots <- function(model, path='./outputs/'){
+
   
   # Extract the variables from the model
   all_vars <- all.vars(formula(model))
@@ -16,7 +17,14 @@ DiagnosticPlots <- function(model, path='./outputs/'){
   # is going.
   png(filepath, width = 1800, height = 1800, res = 200, type = 'cairo')
   par(mfrow = c(2, 3)) 
-  for (i in 1:6){plot(model, which = i)}
+
+  for (i in 1:6){
+    tryCatch(
+    plot(model, which = i),
+    error = function(e) NULL
+    )
+  }
+
  
   dev.off()
 }
