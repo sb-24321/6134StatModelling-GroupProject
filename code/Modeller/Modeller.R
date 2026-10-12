@@ -3,7 +3,14 @@
 #' As a result, user can import just this file, and have access to all the various function
 #' that are developed for this project.
 
-source('./code/Modeller/Modelling/CreateRegressionModel.R')
+# Modelling
+source('./code/Modeller/Modelling/CreateRegressionModel.R') # Create specified models.
+
+# Plotting
+source('./code/Modeller/Plotting/DiagnosticPlots.R') # Plot diagnostics for a model.
+
+# Misc
+source('./code/Modeller/Misc/CreateAllCombinations.R') # All combinations of variables.
 
 
 
