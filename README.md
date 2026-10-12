@@ -83,22 +83,23 @@ outputs.
 Function will create a regression model based on the given model type. The idea is to take
 the dataset we are referring to, give the function the column name of the response variable
 (y) and the column name(s) of the explanatory variables (x)
-##### Paramters
-`data`: 
-(dataframe) The full dataset we are referring to.
-`response_var`: 
-(string or list) The column name of the variable we say to be our response variable, y.
-`explanatory_vars`
-(string or list): Name of the column(s) of the variables we will take to be our explanatory variables.
-`model_type`:
-(string) This will specify what type of model we would like to fit. There are currently
+##### Parameters
+> `data`: (dataframe) The full dataset we are referring to.
+
+
+> `response_var`: (string or list) The column name of the variable we say to be our response variable, y.
+
+
+> `explanatory_vars` (string or list): Name of the column(s) of the variables we will take to be our explanatory variables.
+
+
+> `model_type`: (string) This will specify what type of model we would like to fit. There are currently 
 three options: 'normal' (which is the default value), 'bionmial' and 'poisson'.
+
 ##### Outputs
 This is return a linear model (if model type is normal) or a generalised linear model (if
-other types are used). 
-
-
-
+other types are used). These can then be used to see the model coefficients and other
+statistics surrounding it.
 
 ## Mathematical Methods
 This section will explain the mathematical methods used to produce the outputs for various
