@@ -1,7 +1,7 @@
 #' This file serves as an example of each function that can be performed, so far.
 #' This is a good reference for when testing to see the functionality.
 
-source('./code/General_Model.R')
+source('./GeneralModel/GeneralModel.R')
 
 # We will show this in the matches dataset, as it is much smaller and simpler.
 matches <- read.csv("./data/ashford_matches.csv")
