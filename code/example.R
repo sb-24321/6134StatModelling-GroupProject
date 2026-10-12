@@ -13,5 +13,11 @@ model <- CreateModel(data=matches,
                      response_var='num_home_away',
                      explanatory_vars=c('opponent_rank', 'goals_conceded'),
                      model_type='binomial')
+print(model)
+
+model <- CreateModel(data=matches,
+                     response_var='goals_conceded',
+                     explanatory_vars=c('home_away', 'opponent_rank'),
+                     model_type='poisson')
 
 print(model)
