@@ -11,15 +11,16 @@ CreateRegressionModel <- function(data,
   # Create the formula to fit into the model.
   formula <- reformulate(explanatory_vars, response=response_var) 
   
-  # Fit the model based on model_type.
-  if (model_type=='normal'){
-    model <- lm(formula, data=data) 
-  } else if (model_type=='binomial'){ 
-    model <- glm(formula, data=data, family=binomial(link='logit')) 
-  } else if (model_type=='poisson'){
-    model <- glm(formula, data=data, family=poisson(link='log')) 
-  }
-
+  # Switch case to convert the users chosen model into a model type.
+  # NOTE: Add link to argument if needs be.
+  model_family <- switch(model_type,
+  'normal'=gaussian(),
+  'binomial'=binomial(link='logit'),
+  'poisson'=poisson(link='log')
+  )
+  
+  # Create and return the model. 
+  model <- glm(formula, data=data, family=model_family)
   return(model)
 }
 
