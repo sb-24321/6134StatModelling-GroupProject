@@ -7,8 +7,11 @@ repo itself will host the source code and the graphical outputs of the code.
 This repository is largely structued into three folders:
 
 6134StatModelling-GroupProject
+
 |-> code/
+
 |-> data/
+
 |-> outputs/
 
 ### Code
