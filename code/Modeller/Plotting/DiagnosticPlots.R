@@ -1,4 +1,4 @@
-DiagnosticPlots <- function(model, path='./outputs/'){
+DiagnosticPlots <- function(model, path='./outputs/', filename=''){
 
   
   # Extract the variables from the model
@@ -10,7 +10,7 @@ DiagnosticPlots <- function(model, path='./outputs/'){
   dir.create(path, recursive=TRUE, showWarnings=FALSE)
 
   # Create the full path
-  filename <- paste0(family(model)$family, '~', response_var, '=', explanatory_vars)
+  if (filename == ''){filename <- paste0('diag-',family(model)$family, '~', response_var, '=', explanatory_vars)} 
   filepath <- paste0(path, filename)
   
   # Create an image with 6 sections. There are 6 diagnostic plots. You can see where this
