@@ -21,7 +21,7 @@ DiagnosticPlots <- function(model, path='./outputs/'){
   for (i in 1:6){
     tryCatch(
     plot(model, which = i),
-    error = function(e) NULL
+    error = function(e) NULL # try to draw as many plots as possible
     )
   }
 
