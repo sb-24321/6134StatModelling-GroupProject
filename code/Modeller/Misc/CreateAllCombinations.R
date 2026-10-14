@@ -1,6 +1,10 @@
+#' For a given response variable, it will formulate all possible combinations of the other
+#' variables.
+#'
+#' @param data The dataframe containing the response variable and all the other variables.
+#' @param reponse_var The variable that will not be used to make a combination.
+#' @return A list with all the unqiue combination of variables excluding the response. 
 CreateAllCombinations<- function(data, response_var){
-
-
   col_names <- as.list(colnames(data))
 
   # Remove the response variable

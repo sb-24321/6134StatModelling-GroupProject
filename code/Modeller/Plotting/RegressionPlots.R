@@ -1,3 +1,10 @@
+#' Creates a pdf of all the explanatory variables against the response variable on each
+#' page.
+#'
+#' @param model The model that will be plotted.
+#' @param path  The path of where the plot will be stores. Default is './outputs/'.
+#' @param filename The name of the pdf. Leave for an informative filename.
+#' @return A .pdf file of all the plots located in `path`.
 PlotRegression <- function(model, path='./outputs/', filename=''){
   #' Plots the regressions of a model.
 
