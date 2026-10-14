@@ -10,7 +10,7 @@ ConfidenceInterval <- function(model, isNormal=FALSE, level=0.95){
   
   # If isNormal is FALSE, then we will just send `confint`.
   return(
-         ifelse(isNormal, confint.default(model, level=level), confint(model, level=level)
+         ifelse(isNormal, confint.default(model, level=level), confint(model, level=level))
          )
 
 
