@@ -8,7 +8,10 @@ source('./code/Modeller/Modelling/CreateRegressionModel.R') # Create specified m
 
 # Plotting
 source('./code/Modeller/Plotting/DiagnosticPlots.R') # Plot diagnostics for a model.
-source('./code/Modeller/Plotting/RegressionPlots.R') # Plot diagnostics for a model.
+source('./code/Modeller/Plotting/RegressionPlots.R') 
+
+# Testing 
+source('./code/Modeller/Testing/ConfidenceIntervals.R') 
 
 # Misc
 source('./code/Modeller/Misc/CreateAllCombinations.R') # All combinations of variables.

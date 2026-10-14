@@ -2,7 +2,9 @@
 CreateRegressionModel <- function(data, 
                                   response_var, 
                                   explanatory_vars, 
-                                  model_type='normal'){
+                                  model_type='normal',
+                                  link=''
+                                  ){
   
   # Formats the variables. Required to fit the models.
   explanatory_vars <- as.character(unlist(explanatory_vars))
@@ -12,11 +14,11 @@ CreateRegressionModel <- function(data,
   formula <- reformulate(explanatory_vars, response=response_var) 
   
   # Switch case to convert the users chosen model into a model type.
-  # NOTE: Add link to argument if needs be.
+  # Use the default link for the family if none is given by the user.
   model_family <- switch(model_type,
   'normal'=gaussian(),
-  'binomial'=binomial(link='logit'),
-  'poisson'=poisson(link='log')
+  'binomial'=binomial(link=ifelse(link=='', 'logit', link)),
+  'poisson'=poisson(link=ifelse(link=='', 'log', link))
   )
   
   # Create and return the model. 
