@@ -13,7 +13,8 @@ sum(goals_diff)
 sort(matches$opponent_rank)
 
 
-
+# Check for missing values in each column
+colSums(is.na(matches))
 
 
 
