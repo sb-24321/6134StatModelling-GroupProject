@@ -1,6 +1,6 @@
 #' This file gives an example of how to plot any regression model.
 
-source('./code/Modeller/Modeller.R')
+source('./code/modeller/modeller.R')
 library('dplyr')
 
 matches <- read.csv('./data/ashford_matches.csv')
@@ -11,7 +11,6 @@ matches$home_away <- ifelse(matches$home_away=='Home', 1, 0)
 
 home_matches <- matches |>
   dplyr::filter(home_away==1)
-print(home_matches)
 
 # Create a Binomial Regression Model
 model <- CreateRegressionModel(data=matches,
@@ -24,6 +23,6 @@ model <- CreateRegressionModel(data=matches,
 # `goals_conceded` and then finally against `opponent_rank`. 
 #
 # We will the store this in the designated path.
-PlotRegression(model, path='./outputs/EXAMPLE/regression_plots/binomial/', )
+PlotRegression(model, path='./outputs/example/regression_plots/binomial/', )
 
 

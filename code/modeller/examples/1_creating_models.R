@@ -1,4 +1,4 @@
-source('./code/Modeller/Modeller.R')
+source('./code/modeller/modeller.R')
 
 matches <- read.csv('./data/ashford_matches.csv')
 

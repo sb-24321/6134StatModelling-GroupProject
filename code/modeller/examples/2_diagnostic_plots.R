@@ -1,4 +1,4 @@
-source('./code/Modeller/Modeller.R')
+source('./code/modeller/modeller.R')
 
 library(dplyr)
 
@@ -38,7 +38,7 @@ for (model_type in c('poisson', 'normal')){
 
       # ...we will then create a diagnostic plot for each.
       # filepath <- paste0('./outputs/Matches/',response_var,'/')
-      filepath <- paste0('./outputs/EXAMPLE/diagnostic_plots/Matches/',response_var,'/')
+      filepath <- paste0('./outputs/example/diagnostic_plots/matches/',response_var,'/')
       DiagnosticPlots(model, path=filepath)
     }
   }
@@ -53,7 +53,7 @@ for (model_type in c('poisson', 'normal')){
       model <- CreateRegressionModel(data=players, response_var=response_var, 
                                      explanatory_vars=var, model_type=model_type)
 
-      filepath <- paste0('./outputs/EXAMPLE/diagnostic_plots/Players/',response_var,'/')
+      filepath <- paste0('./outputs/example/diagnostic_plots/players/',response_var,'/')
       DiagnosticPlots(model, path=filepath)
     }
   }
