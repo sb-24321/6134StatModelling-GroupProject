@@ -26,8 +26,8 @@ code/
 This directory contains the datasets relevant to this project.
 
 ```text
-code/
-├── tasks/               # contains all the important code organised in weekly tasks.
-└── modeller/            # an experimental package aimed to streamline programming.
+data/
+├── ashford_matches.csv  # Dataset containing the match data of Ashford United.
+└── league_players.csv   # Dataset containing various datapoints on players in the league.
 ```
 
