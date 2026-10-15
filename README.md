@@ -8,11 +8,8 @@ This repository is largely structued into three folders:
 
 ```text
 .
-
 ├── code/               # All the code for the project, including all explanatory data.
-
 ├── data/               # The datasets relating to the project.
-
 └── outputs/            # Any and all outputs, this includes graphical plots and creates tables.
 ```
 
@@ -21,9 +18,7 @@ This directory contain all the code created for this project.
 
 ```text
 code/
-
 ├── tasks/               # contains all the important code organised in weekly tasks.
-
 └── modeller/            # an experimental package aimed to streamline programming.
 ```
 
@@ -32,9 +27,7 @@ This directory contains the datasets relevant to this project.
 
 ```text
 code/
-
 ├── tasks/               # contains all the important code organised in weekly tasks.
-
 └── modeller/            # an experimental package aimed to streamline programming.
 ```
 
