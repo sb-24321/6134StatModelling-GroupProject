@@ -7,6 +7,7 @@ repo itself will host the source code and the graphical outputs of the code.
 This repository is largely structued into three folders:
 
 .
+
 ├── code/               # All the code for the project, including all explanatory data.
 
 ├── data/               # The datasets relating to the project.
@@ -17,7 +18,9 @@ This repository is largely structued into three folders:
 This directory contain all the code created for this project. 
 
 code/
+
 ├── tasks/               # contains all the important code organised in weekly tasks.
+
 └── modeller/            # an experimental package aimed to streamline programming.
 
 ### data/
@@ -25,6 +28,8 @@ This directory contains the datasets relevant to this project.
 
 
 code/
+
 ├── tasks/               # contains all the important code organised in weekly tasks.
+
 └── modeller/            # an experimental package aimed to streamline programming.
 
