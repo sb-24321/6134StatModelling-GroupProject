@@ -31,3 +31,15 @@ data/
 └── league_players.csv   # Dataset containing various datapoints on players in the league.
 ```
 
+### outputs/
+This directory contains all outputs. These could be plots, reusable models or adjusted
+datasets.
+
+```text
+outputs/
+├── examples            # Plots from the `code/modeller/examples/` directory.
+├── plots               # Plots from the `code/tasks/` directory.
+└── models              # Regression models stored from other outputs.
+
+```
+
