@@ -16,7 +16,9 @@ code/tasks
 
 ## File Descriptions
 
-### tasks/2_explanatory_models
+### tasks
+
+#### 2_explanatory_models
 Performs initial explanatory analysis on the data, creates plots for help better understand
 patterns and hints at structure for future models.
 
@@ -28,7 +30,7 @@ patterns and hints at structure for future models.
 | 4_players_plots.R | Sami | Creates plots on the data in `league_players.csv` | Plots found in `./outputs/plots/week_2/players/`. |
 | 5_normal_regression.R | Nahim | Creates simple linear models and plots the diagnostics | Plots found in `./outputs/plots/week_2/normal_regression/`|
 
-### tasks/3_initial_model_building
+#### 3_initial_model_building
 Aims to organise models into different types of regression depending on the type of the data
 
 | File | Author(s) | Code Description | Output(s) |
@@ -45,7 +47,7 @@ where there response variable can only be two values (modelled as 1 and 0).
 
 
 
-### tasks/5_residuals_and_diagnostics
+#### 5_residuals_and_diagnostics
 Checks to see whether a model is well-built and looks to optimise.
 
 | File | Author(s) | Code Description | Output(s) |
