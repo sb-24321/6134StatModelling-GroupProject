@@ -1,8 +1,10 @@
-# ./code
+# code
 
 This directory contains all the programming done for this project. The main coding scripts
 are located in `code/tasks` and are organised into weekly topics based on what we do
 during that week.
+
+## File Structure.
 
 ```text
 code/tasks
@@ -11,5 +13,17 @@ code/tasks
 ├── 4_binomial_models/                  # Creating a binomial model using the data.            
 └── 5_residuals_and_diagnostics/        # Testing to see whether a model is suitable and looking to optimise.            
 ```
+
+## Who did what
+
+### 2_explanatory_models
+
+| File | Author(s) | Code Description | Output(s) |
+| :-- | :-- | :-- | :-- |
+| 1_matches_analysis.R | Sami, Nahim | Performs initial numerical analysis on `ashford_matches.csv` | Summaries the dataset into various statistics. |
+| 2_matches_plots.R | Sami| Creates plots on the data in `ashford_matches.csv` | Plots found in `./outputs/plots/week_2/matches/`. |
+| 3_matches_analysis.R | Sami, Nahim | Performs initial numerical analysis on `league_players.csv` | Summaries the dataset into various statistics. |
+| 4_players_plots.R | Sami | Creates plots on the data in `league_players.csv` | Plots found in `./outputs/plots/week_2/players/`. |
+| 5_normal_regression.R | Nahim | Creates simple linear models and plots the diagnostics | Plots found in `./outputs/plots/week_2/normal_regression/`|
 
 
