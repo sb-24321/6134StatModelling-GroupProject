@@ -16,7 +16,7 @@ code/tasks
 
 ## Who did what
 
-### 2_explanatory_models
+### tasks/2_explanatory_models
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
