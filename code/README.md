@@ -36,8 +36,8 @@ Aims to organise models into different types of regression depending on the type
 
 
 ### tasks/4_binomial_models
-Using the analysis from `./code/tasks/3_initial_model_building` we will built binomial models
-where there response variable can only be two values.
+Using the analysis from `./code/tasks/3_initial_model_building` we will build binomial models
+where there response variable can only be two values (modelled as 1 and 0).
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
