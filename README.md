@@ -3,6 +3,18 @@
 This is the repository for the group project in MTH6134 - Statistical Modelling II. The 
 repo itself will host the source code and the graphical outputs of the code. 
 
+## Group Members
+
+* Ali
+
+* Edson
+
+* Joy
+
+* Nahim
+
+* Sami
+
 ## Project Structure
 This repository is largely structued into three folders:
 
