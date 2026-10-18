@@ -13,6 +13,7 @@ for (script in scripts){
   cat(paste0("Running: ", script, "\n"))
   tryCatch(
     source(script), 
+    # TODO: make the error handing appropriate.
     error = function(e) cat(paste0("WEE WOO WEE WOO COULD NOT RUN: ", script, "\n"))
   ) 
 }
