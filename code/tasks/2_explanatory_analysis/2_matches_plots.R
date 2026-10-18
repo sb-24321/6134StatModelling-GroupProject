@@ -1,9 +1,11 @@
-library('tidyverse')
+library('tidyverse') 
+
+# Load the matches dataset ===============================================================
 
 matches <- read.csv('./data/ashford_matches.csv')
 
-# Color the plots by home and away. Now we can try and compare the home pefomance against
-# the away performance.
+# Plot different quantities ==============================================================
+# Colour the home and away data differently to see the difference.
 
 plot <- ggplot2::ggplot(data=matches) +
   ggplot2::geom_point(mapping = aes(x=opponent_rank, y=goals_scored, color=home_away)) +

@@ -1,13 +1,14 @@
 #' Executes all scripts from the './code' directory.
 
-# Gets the paths for all the scripts.
+# Gets all files to run. =================================================================
 scripts <- list.files(
-  path = "./code/tasks", # just get the code from the `tasks` directory.
+  path = "./code/tasks", # just get the code from the `tasks` directory
   pattern = "\\.R$",
   full.names = TRUE,
   recursive = TRUE
 )
 
+# Run each file seperatly, print a warning if it could not be run ========================
 for (script in scripts){
   cat(paste0("Running: ", script, "\n"))
   tryCatch(

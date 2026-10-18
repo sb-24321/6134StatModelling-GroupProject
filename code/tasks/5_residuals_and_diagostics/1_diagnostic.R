@@ -1,4 +1,6 @@
-model <- readRDS('./outputs/models/binomial/saturated_injured.RData')
+# Load the binomial model ================================================================
+
+model <- readRDS('./outputs/models/binomial/numeric_saturated_injured.RData')
 
 # 
 
