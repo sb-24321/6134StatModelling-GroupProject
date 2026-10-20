@@ -52,4 +52,4 @@ Checks to see whether a model is well-built and looks to optimise.
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
-| 1_diagnostics.R | | | |
+| 1_binomial_diagnostics.R | Sami | A general implemention for diagnosing binomial regression models (in progress) | Console outputs |
