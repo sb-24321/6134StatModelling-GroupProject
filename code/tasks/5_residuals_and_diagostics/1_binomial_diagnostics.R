@@ -1,17 +1,92 @@
 # Load the binomial model ================================================================
 # These models were created in `4_binomial_models/` and saved in `outputs/models/binomial/`
 
-model <- readRDS('./outputs/models/binomial/numeric_saturated_injured.RData')
+model_name <- 'numeric_saturated_injured'
 
-# Test to see whether the predictors are significant =====================================
+# For binomial models.
+model <- readRDS(paste0('./outputs/models/binomial/', model_name, '.RData'))
 
-# summary also contains: null deviance, residual deviance and AIC
-summary(model)
+# Testing the model on different metrics =================================================
 
-# Convert the coefficents to an odds ratio, then calculate a 95% confidence interval for
-# each coefficent.
-exp(coef(model))
-exp(confint(model))
+page1 <- capture.output({
+  cat("MODEL SUMMARY\n\n")
+  print(summary(model))
+})
 
-# Perform a chi squared test =============================================================
-anova(model, test = 'Chisq')
+page2 <- capture.output({
+  cat("\nEXPONENTIATED COEFFICIENTS\n\n")
+  print(exp(coef(model)))
+
+  cat("\nEXPONENTIATED CONFIDENCE INTERVALS\n\n")
+  print(exp(confint(model)))
+})
+
+# Analysis of Deviance table
+page3 <- capture.output({
+  print(anova(model, test = "Chisq"))
+})
+
+# Save the diagnostic information ========================================================
+
+# Create the pdf
+filename <- paste0(model_name, '_diagnostics.pdf')
+filepath <- paste0('./outputs/plots/5_plots/', filename)
+pdf(filepath)
+
+plot.new()
+text(
+  x = 0,
+  y = 1,
+  labels = paste(page1, collapse = "\n"),
+  adj = c(0, 1),
+  family = "mono",
+  cex = 0.5
+)
+
+plot.new()
+text(
+  x = 0,
+  y = 1,
+  labels = paste(page2, collapse = "\n"),
+  adj = c(0, 1),
+  family = "mono",
+  cex = 0.5
+)
+
+plot.new()
+text(
+  x = 0,
+  y = 1,
+  labels = paste(page3, collapse = "\n"),
+  adj = c(0, 1),
+  family = "mono",
+  cex = 0.5
+)
+
+# Residuals vs Fitted
+plot(model, which = 1)
+
+# QQ Plot
+plot(model, which = 2)
+
+# Cooks distance.
+cd <- cooks.distance(model)
+
+plot(cd, type = "h",
+     xlab = "Observation",
+     ylab = "Cook's distance",
+     main = "Cook's Distance")
+
+abline(h = 8 / length(cd), col = "red", lty = 2)
+
+# Labels influential observarions
+idx <- which(cd > 8 / length(cd))
+
+text(x = idx, y = cd[idx],
+     labels = idx,
+     pos = 3, cex = 0.7, col = "red")
+
+dev.off()
+
+
+
