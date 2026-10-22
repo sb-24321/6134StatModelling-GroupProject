@@ -44,6 +44,7 @@ where there response variable can only be two values (modelled as 1 and 0).
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
 | 1_injured_model.R | Sami | Fits a binomial model where we relate injury to all other variables (apart from team and position) | A model saved in `./outputs/models/binomial/`|
+| 2_ashford_players_model.R | Sami | Fits a binomial model where we relate injury to all other variables for just Ashford United players. | A model saved in `./outputs/models/binomial/`|
 
 
 
@@ -52,4 +53,4 @@ Checks to see whether a model is well-built and looks to optimise.
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
-| 1_binomial_diagnostics.R | Sami | A general implemention for diagnosing binomial regression models  | Report saved in `./outputs/plots/5_plots` |
+| 1_diagnostics.R | Sami | A general implemention for diagnosing regression models  | Report saved in `./outputs/diagnostic_reports` |
