@@ -1,12 +1,11 @@
 # Load the model =========================================================================
 
-## Satuarated model for injuries.
-#model_name <- 'numeric_saturated_injured'
-#model_type <- 'binomial'
-
-## Saturated model for ashford player injuries
-model_name <- 'ashford_players_injured'
+## Select the model type:
 model_type <- 'binomial'
+
+## Select the model name:
+#model_name <- 'numeric_saturated_injured'
+model_name <- 'ashford_players_injured'
 
 # Get the model from the directory.
 model <- readRDS(paste0('./outputs/models/', model_type, '/', model_name, '.RData'))
