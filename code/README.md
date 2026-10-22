@@ -53,4 +53,6 @@ Checks to see whether a model is well-built and looks to optimise.
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
-| 1_diagnostics.R | Sami | A general implemention for diagnosing regression models  | Report saved in `./outputs/diagnostic_reports` |
+| 1_diagnostics_report.R | Sami | Generates a report for a model | Report saved in `./outputs/diagnostic_reports/` |
+| 2_diagnostics_plots.R | Joy | Creates polynomial regression models | Plots saved in `./outputs/plots/5_diagnostic_plots/` |
+| 3_ashford_explanation_code_history.R | Joy | Creates various models and compares | Results contained in code |
