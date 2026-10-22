@@ -67,6 +67,6 @@ outputs/
 └── models              # Regression models stored from other outputs.
 ```
 
-### task_documentation
+### task_documentation/
 This directory contains given information, details and advice about the task.
 
