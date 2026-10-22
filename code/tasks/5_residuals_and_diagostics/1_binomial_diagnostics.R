@@ -1,10 +1,9 @@
-# Load the binomial model ================================================================
-# These models were created in `4_binomial_models/` and saved in `outputs/models/binomial/`
+# Load the model =========================================================================
 
 model_name <- 'numeric_saturated_injured'
 model_type <- 'binomial'
 
-# For binomial models.
+# Get the model from the directory.
 model <- readRDS(paste0('./outputs/models/', model_type, '/', model_name, '.RData'))
 
 # Testing the model on different metrics =================================================
@@ -34,6 +33,7 @@ filename <- paste0(model_name, '_diagnostics.pdf')
 filepath <- paste0('./outputs/diagnostic_reports/', model_type,'/', filename)
 pdf(filepath)
 
+# Write the console outputs to the pdf.
 plot.new()
 text(
   x = 0,
