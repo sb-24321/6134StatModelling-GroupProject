@@ -2,9 +2,10 @@
 # These models were created in `4_binomial_models/` and saved in `outputs/models/binomial/`
 
 model_name <- 'numeric_saturated_injured'
+model_type <- 'binomial'
 
 # For binomial models.
-model <- readRDS(paste0('./outputs/models/binomial/', model_name, '.RData'))
+model <- readRDS(paste0('./outputs/models/', model_type, '/', model_name, '.RData'))
 
 # Testing the model on different metrics =================================================
 
@@ -30,7 +31,7 @@ page3 <- capture.output({
 
 # Create the pdf
 filename <- paste0(model_name, '_diagnostics.pdf')
-filepath <- paste0('./outputs/plots/5_plots/', filename)
+filepath <- paste0('./outputs/diagnostic_reports/', model_type,'/', filename)
 pdf(filepath)
 
 plot.new()
