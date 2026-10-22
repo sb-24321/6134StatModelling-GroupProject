@@ -35,6 +35,7 @@ page3 <- capture.output({
 # Create the pdf
 filename <- paste0(model_name, '_diagnostics.pdf')
 filepath <- paste0('./outputs/diagnostic_reports/', model_type,'/', filename)
+dir.create(filepath, recursive=TRUE, showWarnings=FALSE)
 pdf(filepath)
 
 # Write the console outputs to the pdf.
