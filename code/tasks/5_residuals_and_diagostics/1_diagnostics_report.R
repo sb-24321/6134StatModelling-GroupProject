@@ -1,6 +1,11 @@
 # Load the model =========================================================================
 
-model_name <- 'numeric_saturated_injured'
+## Satuarated model for injuries.
+#model_name <- 'numeric_saturated_injured'
+#model_type <- 'binomial'
+
+## Saturated model for ashford player injuries
+model_name <- 'ashford_players_injured'
 model_type <- 'binomial'
 
 # Get the model from the directory.
