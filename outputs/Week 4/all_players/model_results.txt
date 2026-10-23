@@ -1,0 +1,97 @@
+WEEK 4 - ALL PLAYERS
+
+NUMBER OF PLAYERS
+[1] 620
+
+INJURY COUNTS
+
+  0   1 
+505 115 
+
+MODEL 0 - INTERCEPT ONLY
+
+Call:
+glm(formula = injured ~ 1, family = binomial(link = "logit"), 
+    data = players)
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.4796     0.1033  -14.32   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 594.71  on 619  degrees of freedom
+Residual deviance: 594.71  on 619  degrees of freedom
+AIC: 596.71
+
+Number of Fisher Scoring iterations: 4
+
+
+MODEL 1 - FULL LOGISTIC MODEL
+
+Call:
+glm(formula = injured ~ age + minutes_played_ths + training_load + 
+    prev_injuries + bmi, family = binomial(link = "logit"), data = players)
+
+Coefficients:
+                   Estimate Std. Error z value Pr(>|z|)    
+(Intercept)        -4.86880    1.92839  -2.525 0.011576 *  
+age                 0.10536    0.02909   3.622 0.000293 ***
+minutes_played_ths  0.08892    0.15944   0.558 0.577064    
+training_load       0.30320    0.11276   2.689 0.007168 ** 
+prev_injuries       0.51353    0.09112   5.636 1.74e-08 ***
+bmi                -0.04665    0.07149  -0.653 0.513983    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 594.71  on 619  degrees of freedom
+Residual deviance: 538.55  on 614  degrees of freedom
+AIC: 550.55
+
+Number of Fisher Scoring iterations: 5
+
+
+AIC COMPARISON
+       df      AIC
+model0  1 596.7137
+model1  6 550.5461
+
+LIKELIHOOD RATIO TEST
+Analysis of Deviance Table
+
+Model 1: injured ~ 1
+Model 2: injured ~ age + minutes_played_ths + training_load + prev_injuries + 
+    bmi
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1       619     594.71                          
+2       614     538.55  5   56.168 7.506e-11 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ODDS RATIOS
+       (Intercept)                age minutes_played_ths      training_load 
+       0.007682541        1.111107624        1.092991656        1.354189652 
+     prev_injuries                bmi 
+       1.671185566        0.954416982 
+
+95% WALD CONFIDENCE INTERVALS FOR ODDS RATIOS
+                         2.5 %    97.5 %
+(Intercept)        0.000175411 0.3364751
+age                1.049529093 1.1762991
+minutes_played_ths 0.799646020 1.4939495
+training_load      1.085672667 1.6891183
+prev_injuries      1.397865660 1.9979468
+bmi                0.829640476 1.0979597
+
+95% PROFILE-LIKELIHOOD INTERVALS
+                          2.5 %    97.5 %
+(Intercept)        0.0001678374 0.3264175
+age                1.0501108236 1.1772203
+minutes_played_ths 0.8001617620 1.4966807
+training_load      1.0873568078 1.6930455
+prev_injuries      1.3990400835 2.0014109
+bmi                0.8293612132 1.0981671
