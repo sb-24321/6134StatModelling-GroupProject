@@ -1,12 +1,8 @@
 create_diagnostic_report <- function(model, model_name){
   # Load the model =========================================================================
 
-  ## Select the model type:
+  ## Get the model type:
   model_type <- model$family[[1]]
-  print(model_type)
-
-  # Get the model from the directory.
-  model <- readRDS(paste0('./outputs/models/', model_type, '/', model_name, '.RData'))
 
   # Testing the model on different metrics =================================================
 
@@ -21,7 +17,6 @@ create_diagnostic_report <- function(model, model_name){
 
     cat("\nEXPONENTIATED CONFIDENCE INTERVALS\n\n")
     print(exp(confint(model)))
-    print(exp(confint.default(model)))
   })
 
   # Analysis of Deviance table
