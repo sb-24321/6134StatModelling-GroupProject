@@ -8,4 +8,4 @@ These notes are a quick reference to the major actions performed by project memb
 | Created GitHub repository | Sami | 11/10/26 |
 | Added preliminary findings, created models for injuries | Sami | 14/10/26 |
 | Added additional preliminary finding, fitted normal regression models | Nahim | 15/10/26 |
-| Explored regression models in R using the Ashford dataset and dummy variables | Joy |22/10/26|
+| Explored regression models in R using the matches dataset and dummy variables | Joy |22/10/26|
