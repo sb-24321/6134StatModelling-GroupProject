@@ -2,7 +2,7 @@ source('./code/tasks/5_residuals_and_diagnostics/1_create_diagnostic_report.R')
 
 # A list of all model names to create reports for.
 model_names <- c(
-                 'numeric_satuarated_injured',
+                 'numeric_saturated_injured',
                  'ashford_players_injured'
 
 )
