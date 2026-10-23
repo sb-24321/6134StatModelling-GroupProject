@@ -1,0 +1,4 @@
+"coefficient","estimate","multiplicative_effect"
+"(Intercept)",-0.898803205375122,0.4070565314086
+"opponent_rank",0.054347929156204,1.05585189991519
+"home_awayHome",0.693147180554316,1.99999999998874

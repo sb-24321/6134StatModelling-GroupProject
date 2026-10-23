@@ -1,0 +1,61 @@
+
+Call:
+glm(formula = goals_scored ~ opponent_rank + home_away, family = poisson(link = "log"), 
+    data = matches)
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)   
+(Intercept)   -0.89880    0.37052  -2.426  0.01528 * 
+opponent_rank  0.05435    0.01939   2.802  0.00507 **
+home_awayHome  0.69315    0.27386   2.531  0.01137 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 64.844  on 45  degrees of freedom
+Residual deviance: 49.785  on 43  degrees of freedom
+AIC: 133.43
+
+Number of Fisher Scoring iterations: 5
+
+       df      AIC
+model0  1 144.4917
+model1  2 138.2286
+model2  3 133.4326
+model3  4 135.0716
+Analysis of Deviance Table
+
+Model 1: goals_scored ~ 1
+Model 2: goals_scored ~ opponent_rank
+Model 3: goals_scored ~ opponent_rank + home_away
+Model 4: goals_scored ~ opponent_rank * home_away
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)   
+1        45     64.844                        
+2        44     56.580  1   8.2631 0.004046 **
+3        43     49.785  1   6.7960 0.009136 **
+4        42     49.423  1   0.3610 0.547933   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+[1] "Pearson dispersion: 0.990407899746972"
+
+Call:
+glm(formula = goals_scored ~ opponent_rank + home_away, family = quasipoisson(link = "log"), 
+    data = matches)
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)   -0.89880    0.36874  -2.437  0.01900 * 
+opponent_rank  0.05435    0.01930   2.816  0.00732 **
+home_awayHome  0.69315    0.27254   2.543  0.01466 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for quasipoisson family taken to be 0.99041)
+
+    Null deviance: 64.844  on 45  degrees of freedom
+Residual deviance: 49.785  on 43  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 5
+

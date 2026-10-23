@@ -1,0 +1,71 @@
+
+Call:
+glm(formula = prev_injuries ~ age + position + training_load, 
+    family = poisson(link = "log"), data = players)
+
+Coefficients:
+                Estimate Std. Error z value Pr(>|z|)  
+(Intercept)    -0.887102   0.431705  -2.055   0.0399 *
+age             0.002689   0.010974   0.245   0.8064  
+positionFWD     0.067126   0.115274   0.582   0.5604  
+positionGK      0.126622   0.146142   0.866   0.3863  
+positionMID    -0.041175   0.104757  -0.393   0.6943  
+training_load2  0.631991   0.347698   1.818   0.0691 .
+training_load3  0.733773   0.340264   2.156   0.0310 *
+training_load4  0.753045   0.343769   2.191   0.0285 *
+training_load5  0.750029   0.355651   2.109   0.0350 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 864.59  on 619  degrees of freedom
+Residual deviance: 855.73  on 611  degrees of freedom
+AIC: 1646.7
+
+Number of Fisher Scoring iterations: 5
+
+       df      AIC
+model0  1 1639.544
+model1  2 1641.430
+model2  5 1645.661
+model3  9 1646.681
+Analysis of Deviance Table
+
+Model 1: prev_injuries ~ 1
+Model 2: prev_injuries ~ age
+Model 3: prev_injuries ~ age + position
+Model 4: prev_injuries ~ age + position + training_load
+  Resid. Df Resid. Dev Df Deviance Pr(>Chi)
+1       619     864.59                     
+2       618     864.48  1   0.1139   0.7358
+3       615     862.71  3   1.7688   0.6217
+4       611     855.73  4   6.9804   0.1369
+[1] "Pearson dispersion: 1.30368592568729"
+
+Call:
+glm(formula = prev_injuries ~ age + position + training_load, 
+    family = quasipoisson(link = "log"), data = players)
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    -0.887102   0.492932  -1.800   0.0724 .
+age             0.002689   0.012531   0.215   0.8301  
+positionFWD     0.067126   0.131622   0.510   0.6102  
+positionGK      0.126622   0.166869   0.759   0.4483  
+positionMID    -0.041175   0.119615  -0.344   0.7308  
+training_load2  0.631991   0.397010   1.592   0.1119  
+training_load3  0.733773   0.388522   1.889   0.0594 .
+training_load4  0.753045   0.392525   1.918   0.0555 .
+training_load5  0.750029   0.406091   1.847   0.0652 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for quasipoisson family taken to be 1.303764)
+
+    Null deviance: 864.59  on 619  degrees of freedom
+Residual deviance: 855.73  on 611  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 5
+
