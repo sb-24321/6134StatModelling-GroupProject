@@ -142,7 +142,6 @@ plot(
 )
 abline(h = 0, col = "red", lty = 2)
 
-# Cook's distance
 plot(
   cooks.distance(model1),
   type = "h",
