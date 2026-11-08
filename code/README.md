@@ -25,10 +25,10 @@ patterns and hints at structure for future models.
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
 | 1_matches_analysis.R | Sami, Nahim | Performs initial numerical analysis on `ashford_matches.csv` | Summaries the dataset into various statistics. |
-| 2_matches_plots.R | Sami| Creates plots on the data in `ashford_matches.csv` | Plots found in `./outputs/plots/week_2/matches/`. |
+| 2_matches_plots.R | Sami| Creates plots on the data in `ashford_matches.csv` | Plots found in `./outputs/week_2/plots/matches/`. |
 | 3_matches_analysis.R | Sami, Nahim | Performs initial numerical analysis on `league_players.csv` | Summaries the dataset into various statistics. |
-| 4_players_plots.R | Sami | Creates plots on the data in `league_players.csv` | Plots found in `./outputs/plots/week_2/players/`. |
-| 5_normal_regression.R | Nahim | Creates simple linear models and plots the diagnostics | Plots found in `./outputs/plots/week_2/normal_regression/`|
+| 4_players_plots.R | Sami | Creates plots on the data in `league_players.csv` | Plots found in `./outputs/week_2/plots/players/`. |
+| 5_normal_regression.R | Nahim | Creates simple linear models and plots the diagnostics | Plots found in `./outputs/week_2/plots/normal_regression/`|
 
 #### 3_initial_model_building
 Aims to organise models into different types of regression depending on the type of the data
@@ -43,8 +43,8 @@ where there response variable can only be two values (modelled as 1 and 0).
 
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
-| 1_injured_model.R | Sami | Fits a binomial model where we relate injury to all other variables (apart from team and position) | A model saved in `./outputs/models/binomial/`|
-| 2_ashford_players_model.R | Sami | Fits a binomial model where we relate injury to all other variables for just Ashford United players. | A model saved in `./outputs/models/binomial/`|
+| 1_injured_model.R | Sami | Fits a binomial model where we relate injury to all other variables (apart from team and position) | A model saved in `./outputs/week_4/`|
+| 2_ashford_players_model.R | Sami | Fits a binomial model where we relate injury to all other variables for just Ashford United players. | A model saved in `./outputs/week_4/`|
 
 
 
