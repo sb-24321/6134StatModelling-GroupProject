@@ -2,7 +2,7 @@ library('tidyverse')
 
 players <- read.csv('./data/league_players.csv')
 
-path <- "./outputs/plots/week_2/players"
+path <- "./outputs/week_2/plots/players"
 
 # Plot various quantities against each other =============================================
 

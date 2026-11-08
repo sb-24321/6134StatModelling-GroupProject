@@ -1,0 +1,7 @@
+"dataset","response","type","family","link","explanatory","notes"
+"players","injured","binary (0/1)","binomial","logit (alt: probit, cloglog)","position, age, minutes_played, training_load, prev_injuries, bmi (team as grouping)","Main response of interest"
+"matches","goals_scored","count","poisson","log","home_away, opponent_rank","Check overdispersion; quasipoisson / negative binomial if needed"
+"matches","goals_conceded","count","poisson","log","home_away, opponent_rank","Check overdispersion"
+"players","prev_injuries","count","poisson","log","age, position, minutes_played, bmi","More naturally an explanatory variable for injured"
+"players","minutes_played","continuous (positive)","gaussian (or Gamma)","identity (Gamma: log)","age, position, training_load, bmi","Bounded above, so Gaussian is approximate"
+"players","bmi","continuous","gaussian","identity","age, position","Roughly symmetric, so Gaussian is reasonable"

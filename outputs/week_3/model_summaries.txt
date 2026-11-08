@@ -1,0 +1,61 @@
+== lm ==
+
+Call:
+lm(formula = frm, data = matches)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.1033 -0.8436 -0.0868  0.7085  5.4882 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    0.00806    0.43206   0.019   0.9852  
+home_awayHome  0.86957    0.37758   2.303   0.0262 *
+opponent_rank  0.06809    0.02685   2.536   0.0149 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.28 on 43 degrees of freedom
+Multiple R-squared:  0.2144,	Adjusted R-squared:  0.1779 
+F-statistic: 5.868 on 2 and 43 DF,  p-value: 0.005581
+
+
+== Gaussian glm (identity link) ==
+
+Call:
+glm(formula = frm, family = gaussian(link = "identity"), data = matches)
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)    0.00806    0.43206   0.019   0.9852  
+home_awayHome  0.86957    0.37758   2.303   0.0262 *
+opponent_rank  0.06809    0.02685   2.536   0.0149 *
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 1.639493)
+
+    Null deviance: 89.739  on 45  degrees of freedom
+Residual deviance: 70.498  on 43  degrees of freedom
+AIC: 158.18
+
+Number of Fisher Scoring iterations: 2
+
+
+== Ashford vs rest, Fisher exact test ==
+       Injured
+Ashford   0   1
+  FALSE 484 111
+  TRUE   21   4
+
+	Fisher's Exact Test for Count Data
+
+data:  tab
+p-value = 1
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+ 0.2032988 2.5310094
+sample estimates:
+odds ratio 
+ 0.8307817 
+

@@ -27,7 +27,7 @@ stopifnot(
 )
 
 # Create output folder
-out_dir <- "outputs/Week 6/goals_scored"
+out_dir <- "outputs/week_6/goals_scored"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 

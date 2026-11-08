@@ -25,7 +25,7 @@ stopifnot(
   all(matches$goals_conceded == floor(matches$goals_conceded))
 )
 
-out_dir <- "outputs/Week 6/goals_conceded"
+out_dir <- "outputs/week_6/goals_conceded"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 

@@ -174,7 +174,7 @@ par(mfrow = c(1, 1))
 # 9. Save diagnostic plots to the outputs folder
 # ------------------------------------------------------------
 
-output_dir <- "./outputs/plots/week_2/normal_regression"
+output_dir <- "./outputs/week_2/plots/normal_regression"
 dir.create(output_dir, recursive = TRUE,
            showWarnings = FALSE)
 

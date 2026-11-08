@@ -26,7 +26,7 @@ stopifnot(
   all(players$prev_injuries == floor(players$prev_injuries))
 )
 
-out_dir <- "outputs/Week 6/previous_injuries"
+out_dir <- "outputs/week_6/previous_injuries"
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 

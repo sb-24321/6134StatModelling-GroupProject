@@ -104,7 +104,7 @@ head(predictions)
 
 # 7. Diagnostic plots ----------------------------------------
 
-output_dir <- "./outputs/Week 4/all_players"
+output_dir <- "./outputs/week_4/all_players"
 
 dir.create(
   output_dir,

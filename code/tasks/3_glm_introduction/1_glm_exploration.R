@@ -1,8 +1,8 @@
 # Week 3: Generalised linear models - setting up and exploring responses
 # Run from the project root. Edit data_dir if the CSVs live elsewhere.
 
-data_dir <- "."
-out_dir  <- file.path("outputs", "Week 3")
+data_dir <- "./data"
+out_dir  <- file.path("outputs", "week_3")
 dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
 matches <- read.csv(file.path(data_dir, "ashford_matches.csv"), stringsAsFactors = FALSE)
