@@ -54,4 +54,4 @@ Checks to see whether a model is well-built and looks to optimise.
 | File | Author(s) | Code Description | Output(s) |
 | :-- | :-- | :-- | :-- |
 | 1_diagnostics_plots.R | Joy | Creates polynomial regression models | Blueprint to create and compare models |
-| 2_ashford_explanation_code_history.R | Joy | Creates various poisson regression models and compares | Plots saved in `./outputs/plots5_diagnostic_plots/` |
+| 2_ashford_explanation_code_history.R | Joy | Creates various poisson regression models and compares | |
