@@ -1,0 +1,32 @@
+
+Call:
+glm(formula = freq ~ inj + prev + load + inj:prev + inj:load, 
+    family = poisson, data = d3)
+
+Coefficients:
+                Estimate Std. Error z value
+(Intercept)      5.16471    0.06927  74.560
+injYes          -2.41855    0.21263 -11.375
+prevYes         -0.08322    0.08908  -0.934
+loadHigh        -0.68721    0.09430  -7.287
+injYes:prevYes   1.03632    0.22635   4.578
+injYes:loadHigh  0.73940    0.20904   3.537
+                Pr(>|z|)    
+(Intercept)      < 2e-16 ***
+injYes           < 2e-16 ***
+prevYes         0.350191    
+loadHigh        3.17e-13 ***
+injYes:prevYes  4.68e-06 ***
+injYes:loadHigh 0.000405 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 345.93257  on 7  degrees of freedom
+Residual deviance:   0.48883  on 2  degrees of freedom
+AIC: 59.332
+
+Number of Fisher Scoring iterations: 3
+
