@@ -11,4 +11,5 @@ These notes are a quick reference to the major actions performed by project memb
 | Explored regression models in R using the matches dataset and dummy variables | Joy |22/10/26|
 | Provided guidance on cloning repository and using git on RStudio | Nahim | 22/10/26 |
 | Completed poisson regression, investigating goals scored/conceded and previous injuries | Nahim | 23/10/26 |
+| Explored the different variables and identified which are explanatory and which are repsonses and categorised them in terms of type of response, and identified potential models for them | Edson | 05/11/2026 |
 | Explored contingency tables and log-linear model,home/away vs match result, and injury vs previous injuries and training load|Ali|12/11/26|
