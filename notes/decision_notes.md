@@ -8,4 +8,4 @@ were made.
 |1|9/10/26|Using GitHub|Using GitHub will allow the group to work collaboratively on programming, and keeps a log on the changes.|We will setup the GitHub for the code| Completed (11/10/26)|
 |2|9/10/26|Workflow|Knowing what to expect from each group member.|Organise the code and outputs into subsections according to the timeline seen in the `documents` directory| Ongoing |
 |3|15/10/26|Centralising project|We will use GitHub to house the entire project, instead of having just the code on the GitHub and the documents on the shared workspace.|Migrate all documents to GitHub| Completed (20/10/26)|
-
+|4|13/11/26|Proposed analytical directions|Logistic regression on player injuries, Poisson regression on goals scored and further exploratory work involving GLMMs have been discussed as potential directions.|Finalise decision on three analyses to present and start making a plan for the final report| Ongoing|
