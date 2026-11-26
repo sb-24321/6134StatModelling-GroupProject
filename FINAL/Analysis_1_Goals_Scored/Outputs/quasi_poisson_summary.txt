@@ -1,0 +1,21 @@
+
+Call:
+glm(formula = goals_scored ~ opponent_rank + home_away, family = quasipoisson(link = "log"), 
+    data = matches)
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)   -0.89880    0.36874  -2.437  0.01900 * 
+opponent_rank  0.05435    0.01930   2.816  0.00732 **
+home_awayHome  0.69315    0.27254   2.543  0.01466 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for quasipoisson family taken to be 0.99041)
+
+    Null deviance: 64.844  on 45  degrees of freedom
+Residual deviance: 49.785  on 43  degrees of freedom
+AIC: NA
+
+Number of Fisher Scoring iterations: 5
+

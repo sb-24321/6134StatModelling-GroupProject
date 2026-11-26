@@ -1,0 +1,15 @@
+$Residual_Deviance
+[1] 49.7845
+
+$Residual_DF
+[1] 43
+
+$Deviance_Dispersion
+[1] 1.157779
+
+$Pearson_Dispersion
+[1] 0.9904079
+
+$GOF_P_Value
+[1] 0.221428
+

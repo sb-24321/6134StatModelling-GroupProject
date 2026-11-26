@@ -1,0 +1,21 @@
+
+Call:
+glm(formula = goals_scored ~ opponent_rank + home_away, family = poisson(link = "log"), 
+    data = matches)
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)   
+(Intercept)   -0.89880    0.37052  -2.426  0.01528 * 
+opponent_rank  0.05435    0.01939   2.802  0.00507 **
+home_awayHome  0.69315    0.27386   2.531  0.01137 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for poisson family taken to be 1)
+
+    Null deviance: 64.844  on 45  degrees of freedom
+Residual deviance: 49.785  on 43  degrees of freedom
+AIC: 133.43
+
+Number of Fisher Scoring iterations: 5
+
